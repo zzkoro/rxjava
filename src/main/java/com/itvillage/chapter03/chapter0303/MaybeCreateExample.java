@@ -17,9 +17,9 @@ public class MaybeCreateExample {
         Maybe<String> maybe = Maybe.create(new MaybeOnSubscribe<String>() {
             @Override
             public void subscribe(MaybeEmitter<String> emitter) throws Exception {
-//                emitter.onSuccess(DateUtil.getNowDate());
+                emitter.onSuccess(DateUtil.getNowDate());
 
-                emitter.onComplete();
+//                emitter.onComplete();
             }
         });
 

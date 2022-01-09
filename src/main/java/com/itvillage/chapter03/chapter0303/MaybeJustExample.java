@@ -5,7 +5,6 @@ import com.itvillage.utils.LogType;
 import com.itvillage.utils.Logger;
 import io.reactivex.Maybe;
 import io.reactivex.Observable;
-import javafx.beans.value.ObservableBooleanValue;
 
 public class MaybeJustExample {
     public static void main(String[] args){

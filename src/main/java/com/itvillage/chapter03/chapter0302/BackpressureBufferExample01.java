@@ -25,6 +25,7 @@ public class BackpressureBufferExample01 {
                         BackpressureOverflowStrategy.DROP_LATEST)
                 .doOnNext(data -> Logger.log("#onBackpressureBuffer doOnNext()", data))
                 .observeOn(Schedulers.computation(), false, 1)
+                .doOnNext(data -> Logger.log("#onBackpressureBuffer2 doOnNext()", data))
                 .subscribe(
                         data -> {
                             TimeUtil.sleep(1000L);

@@ -13,7 +13,7 @@ public class MissingBackpressureExceptionExample {
     public static void main(String[] agrs) throws InterruptedException {
         Flowable.interval(1L, TimeUnit.MILLISECONDS)
                 .doOnNext(data -> Logger.log(LogType.DO_ON_NEXT, data))
-                .observeOn(Schedulers.computation())
+                .observeOn(Schedulers.io())
                 .subscribe(
                         data -> {
                             Logger.log(LogType.PRINT, "# 소비자 처리 대기 중..");
